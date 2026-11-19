@@ -1,0 +1,108 @@
+/* Sistema tipográfico global — Fundación Huellas del Cielo.
+   Poppins 300 / 400 / 700. No modifica el banner principal, que es una imagen. */
+:root {
+  --font-institucional: 'Poppins', 'Century Gothic', 'Arial', sans-serif;
+  --texto-institucional: #14265b;
+}
+html { -webkit-text-size-adjust: 100%; }
+body, button, input, select, textarea { font-family: var(--font-institucional) !important; }
+/* Encabezados: misma familia, peso y escala consistente en todas las páginas. */
+h1, h2, h3, h4, h5, h6,
+.page-intro h1, .inner-hero h1, .events-hero h1,
+.events-toolbar h2, .event-intro h3, .events-group-heading h3,
+.home-events-head h2, .feature-video-heading h2, .gallery-intro h2,
+.editorial-head h2, .section-intro h2, .home-quick-head h2,
+.footer-message h3, .video-cover-content strong,
+.gallery-tile-overlay strong, .quick-links strong,
+.photo-card-body h3, .value-tiles h3, .timeline-cards h3 {
+  font-family: var(--font-institucional) !important;
+  font-weight: 700 !important;
+  font-style: normal;
+  letter-spacing: -0.035em;
+}
+h1, .page-intro h1, .inner-hero h1, .events-hero h1 {
+  font-size: clamp(2.55rem, 5.3vw, 4.9rem) !important;
+  line-height: 1.12 !important;
+}
+h2, .editorial-head h2, .events-toolbar h2, .home-events-head h2,
+.feature-video-heading h2, .gallery-intro h2, .section-intro h2,
+.home-quick-head h2 {
+  font-size: clamp(2rem, 3.8vw, 3.45rem) !important;
+  line-height: 1.16 !important;
+}
+h3, .event-intro h3, .events-group-heading h3 {
+  font-size: clamp(1.35rem, 2.1vw, 1.9rem) !important;
+  line-height: 1.32 !important;
+}
+h4 { font-size: clamp(1.12rem, 1.5vw, 1.4rem) !important; line-height: 1.35 !important; }
+/* El texto destacado dentro de un título conserva la misma fuente y el mismo peso. */
+h1 em, h2 em, h3 em, .events-hero h1 em,
+.home-events-head h2 em, .inner-hero h1 em {
+  font-family: var(--font-institucional) !important;
+  font-weight: 700 !important;
+  font-style: normal !important;
+}
+/* Subtítulos, bajadas y frases introductorias. */
+.page-intro p, .inner-hero p, .events-hero p,
+.feature-video-heading > p, .gallery-intro > p,
+.home-events-head p, .section-intro > p,
+.event-intro > p, .events-group-heading > p,
+.video-cover-sub, .home-quick-head > p {
+  font-family: var(--font-institucional) !important;
+  font-weight: 300 !important;
+  font-size: clamp(1rem, 1.35vw, 1.125rem) !important;
+  line-height: 1.85 !important;
+}
+/* Texto de lectura: regular 16 px / 31 px, alineación izquierda y azul institucional. */
+main p, main li, main dd,
+.editorial-content p, .pdf-bullet p,
+.event-intro p, .events-group-heading p,
+.photo-card-body p, .value-tiles p, .timeline-cards p,
+.notice, .events-footnote {
+  font-family: var(--font-institucional) !important;
+  font-size: 16px !important;
+  line-height: 1.94 !important;
+  text-align: left;
+  font-weight: 400 !important;
+  color: var(--texto-institucional);
+}
+/* Respetar contraste de texto sobre fondos oscuros, portadas y fotografías. */
+.inner-hero p, .events-hero p, .video-cover-sub,
+.video-cover-content p, .gallery-tile-overlay p,
+.events-slide span, .events-fullscreen-bar p {
+  color: #f1f5ff !important;
+}
+/* Los subtítulos mantienen su peso Light incluso tras las reglas de párrafo. */
+.page-intro p, .inner-hero p, .events-hero p,
+.feature-video-heading > p, .gallery-intro > p,
+.home-events-head p, .section-intro > p,
+.event-intro > p, .events-group-heading > p,
+.video-cover-sub, .home-quick-head > p {
+  font-weight: 300 !important;
+}
+/* Elementos de navegación y controles: conservar medidas compactas y legibles. */
+.navlink, .page-section-links a, .events-filter, .btn,
+.events-open-button, .events-fullscreen-close, .gallery-arrow,
+.gallery-tile-overlay small, .section-kicker, .mini-kicker,
+.eyebrow, .events-kicker, .event-number {
+  font-family: var(--font-institucional) !important;
+}
+/* Evitar que títulos extensos de programas invadan columnas. */
+h1, h2, h3, h4 { overflow-wrap: break-word; }
+@media (max-width: 700px) {
+  h1, .page-intro h1, .inner-hero h1, .events-hero h1 {
+    font-size: clamp(2.1rem, 9vw, 3.1rem) !important;
+  }
+  h2, .editorial-head h2, .events-toolbar h2, .home-events-head h2,
+  .feature-video-heading h2, .gallery-intro h2, .section-intro h2,
+  .home-quick-head h2 {
+    font-size: clamp(1.8rem, 7.2vw, 2.55rem) !important;
+  }
+  h3, .event-intro h3, .events-group-heading h3 { font-size: clamp(1.22rem, 5vw, 1.6rem) !important; }
+  main p, main li, main dd, .editorial-content p, .pdf-bullet p,
+  .event-intro p, .events-group-heading p, .notice {
+    font-size: 16px !important;
+    line-height: 1.85 !important;
+  }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

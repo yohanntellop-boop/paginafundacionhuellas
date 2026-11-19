@@ -1,0 +1,9 @@
+FUNDACIÓN HUELLAS DEL CIELO — SITIO WEB COMPLETO
+
+Abra index.html en su navegador.
+El sitio incorpora contenido institucional, Eventos, Galería de fotos y video de presentación.
+Todos los recursos están incluidos en assets/.
+El formulario de contacto es demostrativo y requiere configuración antes de publicar.
+Las fotografías de la galería institucional se muestran con los nombres de archivo originales.
+El logo original del proyecto se conserva en assets/img/logo-original.jpg y no se reemplazó.
+Para publicar el sitio, suba toda la carpeta a su alojamiento web.

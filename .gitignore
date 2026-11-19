@@ -1,0 +1,8 @@
+# Archivos de trabajo locales
+.claude/
+# Documentos privados (comprobantes de pago)
+voucher-payment*.jpg
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store
