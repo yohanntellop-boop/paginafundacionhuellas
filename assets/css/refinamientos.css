@@ -38,3 +38,39 @@ body{overflow-x:hidden}h1,h2,h3,h4,.gallery-tile-overlay strong,.brand-name stro
   .hero-m-btn-sumate{width:69%}
   .hero-m-btn:focus-visible{outline:3px solid #dcff4b;outline-offset:3px}
 }
+
+/* ===== Carrusel del banner principal (rota cada 5 s) ===== */
+.hero-slider{position:relative;overflow:hidden}
+.hs-viewport{overflow:hidden;width:100%}
+.hs-track{display:flex;align-items:stretch;transition:transform .9s cubic-bezier(.65,0,.35,1);will-change:transform}
+.hs-slide{flex:0 0 100%;min-width:100%;position:relative}
+.hs-dots{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);display:flex;gap:10px;z-index:5}
+.hs-dot{width:11px;height:11px;border-radius:50%;border:2px solid #fff;background:rgba(255,255,255,.35);padding:0;cursor:pointer;box-shadow:0 0 0 1px rgba(19,39,122,.45),0 1px 4px rgba(0,0,0,.25);transition:background .2s,transform .2s}
+.hs-dot.is-active{background:#d8ff4b;border-color:#d8ff4b;transform:scale(1.15)}
+.hs-dot:focus-visible{outline:3px solid #dcff4b;outline-offset:3px}
+
+/* Diapositiva 2: "Juntos por una transformación psicosocial"
+   Tipografía del banner principal (Montserrat: fina + extra negrita). */
+.hs-slide-2{background:linear-gradient(180deg,#a9dcf3 0%,#c6e6f3 45%,#e6f4f8 100%);overflow:hidden}
+.hs2-photo{position:absolute;top:0;right:0;bottom:0;width:74%}
+.hs2-photo img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 38%);mask-image:linear-gradient(90deg,transparent 0%,#000 38%)}
+.hs2-copy{position:absolute;left:6%;top:50%;transform:translateY(-50%);width:44%;z-index:2;color:#13277a}
+.hs2-title{margin:0;line-height:1.02;color:#13277a;letter-spacing:-.01em}
+.hs2-title span{display:block;font-family:"Montserrat",sans-serif!important}
+.hs2-l1,.hs2-l3{font-weight:300;font-size:clamp(1.6rem,3.6vw,3.6rem)}
+.hs2-l2{font-weight:800;font-size:clamp(2.2rem,5.2vw,5.2rem);margin:.06em 0}
+.hs2-divider{display:flex;align-items:center;gap:12px;margin-top:clamp(14px,2vw,28px);color:#13277a;padding-left:4px}
+.hs2-divider i{display:block;width:clamp(36px,4vw,64px);height:2px;background:currentColor;border-radius:2px}
+
+/* Celular (≤700px): como el banner 1, imagen arriba y texto debajo */
+@media(max-width:700px){
+  .hs-slide-2{display:flex;flex-direction:column}
+  .hs2-photo{position:relative;width:100%;height:auto;flex:0 0 auto}
+  .hs2-photo img{height:auto;aspect-ratio:1/0.9;object-position:45% center;
+    -webkit-mask-image:linear-gradient(180deg,#000 70%,transparent 100%);mask-image:linear-gradient(180deg,#000 70%,transparent 100%)}
+  .hs2-copy{position:relative;left:auto;top:auto;transform:none;width:auto;flex:1 1 auto;display:flex;flex-direction:column;justify-content:center;padding:8px 24px 56px}
+  .hs2-l1,.hs2-l3{font-size:clamp(1.6rem,7.5vw,2.4rem)}
+  .hs2-l2{font-size:clamp(2.1rem,10.5vw,3.3rem)}
+  .hs-dots{bottom:16px}
+}
