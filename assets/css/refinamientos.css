@@ -10,3 +10,8 @@ body{overflow-x:hidden}h1,h2,h3,h4,.gallery-tile-overlay strong,.brand-name stro
 @media(max-width:850px){.home-events-head{align-items:flex-start;flex-direction:column}.events-fullscreen-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.page-section-nav{top:65px}}
 @media(max-width:580px){.events-slide{width:205px;flex-basis:205px;height:178px}.events-track{animation-duration:95s}.events-fullscreen-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.events-fullscreen-thumb{border-radius:9px}.events-fullscreen-bar{padding:12px 16px}.events-fullscreen-close span{display:none}.event-photo-viewer{padding:65px 45px}.event-photo-arrow{width:34px;height:34px}.event-photo-prev{left:5px}.event-photo-next{right:5px}.home-events-head h2{font-size:2.1rem}}
 @media(prefers-reduced-motion:reduce){.events-track{animation:none;max-width:100vw;overflow-x:auto}.events-slide img{transition:none}}
+
+/* Logo horizontal del encabezado: se muestra completo, sin recortes */
+.brand{flex:0 0 auto}
+.brand-logo{display:block;height:52px;width:auto;max-width:none}
+@media(max-width:850px){.brand-logo{height:42px}}
