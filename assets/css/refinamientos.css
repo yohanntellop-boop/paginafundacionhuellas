@@ -15,3 +15,26 @@ body{overflow-x:hidden}h1,h2,h3,h4,.gallery-tile-overlay strong,.brand-name stro
 .brand{flex:0 0 auto}
 .brand-logo{display:block;height:52px;width:auto;max-width:none}
 @media(max-width:850px){.brand-logo{height:42px}}
+
+/* Banner principal en celular (≤700px): foto de los niños sin logo arriba y,
+   debajo, dentro del mismo banner, los textos y botones originales (recortes del banner). */
+.hero-m{display:none}
+@media(max-width:700px){
+  .hero-photo .hero-banner-wrap,.hero-photo .hero-mobile-actions{display:none!important}
+  .hero-m{display:block;position:relative;background:
+      radial-gradient(90% 35% at 0% 100%,rgba(62,22,213,.75),rgba(62,22,213,0) 70%),
+      linear-gradient(180deg,#071ea4 0%,#02217c 55%,#01186f 100%)}
+  .hero-m-photo{position:relative;line-height:0}
+  .hero-m-photo img{display:block;width:100%;height:auto;aspect-ratio:1/0.9;object-fit:cover;object-position:35% 15%;
+    -webkit-mask-image:linear-gradient(180deg,#000 70%,transparent 100%);mask-image:linear-gradient(180deg,#000 70%,transparent 100%)}
+  .hero-m-copy{max-width:540px;margin-left:auto;margin-right:auto;padding:4px 20px 32px;display:flex;flex-direction:column;align-items:flex-start;margin-top:-6%}
+  .hero-m-copy img{display:block;height:auto;max-width:100%}
+  .hero-m-title{width:100%}
+  .hero-m-text{width:82%;margin-top:5%}
+  .hero-m-actions{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-top:7%;width:100%}
+  .hero-m-btn{display:block;border-radius:999px}
+  .hero-m-btn img{width:100%}
+  .hero-m-btn-labor{width:78%}
+  .hero-m-btn-sumate{width:69%}
+  .hero-m-btn:focus-visible{outline:3px solid #dcff4b;outline-offset:3px}
+}
