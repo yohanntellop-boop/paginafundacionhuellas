@@ -74,3 +74,27 @@ body{overflow-x:hidden}h1,h2,h3,h4,.gallery-tile-overlay strong,.brand-name stro
   .hs2-l2{font-size:clamp(2.1rem,10.5vw,3.3rem)}
   .hs-dots{bottom:16px}
 }
+
+/* ===== Botones flotantes sobre todo el carrusel (mismo lugar que en el banner original) ===== */
+.hs-ctas{position:absolute;inset:0;pointer-events:none;z-index:4}
+.hs-cta{position:absolute;top:77.26%;display:block;border-radius:999px;pointer-events:auto;transition:transform .2s,filter .2s}
+.hs-cta img{display:block;width:100%;height:auto}
+.hs-cta-labor{left:4.55%;width:20.69%}
+.hs-cta-sumate{left:26.61%;width:18.42%;background:rgba(10,21,83,.55)}
+.hs-cta:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.hs-cta:focus-visible{outline:3px solid #dcff4b;outline-offset:3px}
+
+/* Banner 2: logo como en el banner 1 y titulo en la misma zona */
+.hs2-logo{position:absolute;left:5.5%;top:6.2%;width:15.13%;height:auto;z-index:2}
+.hs2-copy{top:36%;transform:none;left:4.8%}
+
+@media(max-width:700px){
+  .hs2-logo{display:none}
+  .hs2-copy{top:auto}
+  .hs-ctas{inset:auto 20px 44px 20px;display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+  .hs-cta{position:static}
+  .hs-cta-labor{width:min(78%,340px)}
+  .hs-cta-sumate{width:min(69%,300px)}
+  .hero-m-copy{padding-bottom:200px!important}
+  .hs2-copy{padding-bottom:200px!important}
+}
