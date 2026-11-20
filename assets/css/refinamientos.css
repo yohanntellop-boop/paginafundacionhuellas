@@ -98,3 +98,14 @@ body{overflow-x:hidden}h1,h2,h3,h4,.gallery-tile-overlay strong,.brand-name stro
   .hero-m-copy{padding-bottom:200px!important}
   .hs2-copy{padding-bottom:200px!important}
 }
+
+/* Banner 2 con la imagen en alta resolución: cielo azul intenso como la foto */
+.hs-slide-2{background:radial-gradient(70% 90% at 0% 20%,#015abd 0%,rgba(1,90,189,0) 70%),linear-gradient(180deg,#0a6fd6 0%,#038feb 50%,#6fb6ee 100%)}
+.hs2-photo{width:62%}
+.hs2-photo img{-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 28%);mask-image:linear-gradient(90deg,transparent 0%,#000 28%)}
+.hs2-title{color:#0d1f6e}
+@media(max-width:700px){
+  .hs2-photo{width:100%}
+  .hs2-photo img{object-position:40% center;-webkit-mask-image:linear-gradient(180deg,#000 72%,transparent 100%);mask-image:linear-gradient(180deg,#000 72%,transparent 100%)}
+  .hs-slide-2{background:linear-gradient(180deg,#0a6fd6 0%,#038feb 55%,#2f8fe0 100%)}
+}
