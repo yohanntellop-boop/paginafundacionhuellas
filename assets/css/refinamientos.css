@@ -164,3 +164,8 @@ body{overflow-x:hidden}h1,h2,h3,h4,.gallery-tile-overlay strong,.brand-name stro
 @media(max-width:700px){
   .video-cover.video-cover-img{aspect-ratio:1840/854;min-height:0;border-radius:16px}
 }
+
+/* Formulario de contacto: campo trampa anti-spam (oculto) y estado de envío */
+.form-trampa{position:absolute!important;left:-9999px;width:1px;height:1px;overflow:hidden}
+.contact-form .form-submit:disabled{opacity:.7;cursor:wait}
+.contact-form .form-message{min-height:1.4em;margin-top:12px;font-weight:600;color:#155080}
