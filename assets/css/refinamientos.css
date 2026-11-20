@@ -109,3 +109,6 @@ body{overflow-x:hidden}h1,h2,h3,h4,.gallery-tile-overlay strong,.brand-name stro
   .hs2-photo img{object-position:40% center;-webkit-mask-image:linear-gradient(180deg,#000 72%,transparent 100%);mask-image:linear-gradient(180deg,#000 72%,transparent 100%)}
   .hs-slide-2{background:linear-gradient(180deg,#0a6fd6 0%,#038feb 55%,#2f8fe0 100%)}
 }
+/* Banner 2: textos en blanco */
+.hs-slide-2 .hs2-title,.hs-slide-2 .hs2-copy{color:#fff}
+.hs-slide-2 .hs2-title{text-shadow:0 2px 14px rgba(1,40,110,.35)}
