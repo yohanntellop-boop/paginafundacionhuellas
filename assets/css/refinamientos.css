@@ -15,3 +15,60 @@ body{overflow-x:hidden}h1,h2,h3,h4,.gallery-tile-overlay strong,.brand-name stro
 .brand{flex:0 0 auto}
 .brand-logo{display:block;height:52px;width:auto;max-width:none}
 @media(max-width:850px){.brand-logo{height:42px}}
+
+/* ===== Banner principal por capas: fondo + logo + textos + botones ===== */
+.hero-layered{padding:0!important;position:relative;isolation:isolate;display:flex;align-items:center;min-height:clamp(520px,52vw,760px);background:#0a1553!important;color:#fff;overflow:hidden}
+.hero-layered .hero-bg{position:absolute;inset:0 0 0 auto;width:64%;z-index:-2}
+.hero-layered .hero-bg-img{width:100%;height:100%;object-fit:cover;object-position:40% 30%;display:block}
+.hero-layered::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(60% 80% at 8% 20%,rgba(70,90,255,.35),transparent 60%),
+    radial-gradient(45% 60% at 30% 95%,rgba(120,60,255,.30),transparent 65%),
+    linear-gradient(90deg,#0a1553 0%,#0a1553 37%,rgba(10,21,83,.82) 45%,rgba(10,21,83,.25) 60%,rgba(10,21,83,0) 72%)}
+.hero-layered-inner{width:100%;max-width:1280px;margin:0 auto;padding:clamp(40px,6vw,84px) clamp(16px,5vw,64px)}
+.hero-layered-copy{max-width:660px}
+.hero-brand{display:inline-flex;flex-direction:column;align-items:center;gap:10px;margin-bottom:clamp(22px,3vw,36px);text-align:center}
+.hero-brand-emblem{width:clamp(84px,9vw,128px);height:auto;border-radius:50%;border:5px solid #fff;box-shadow:0 10px 30px rgba(0,0,0,.25);background:#fff}
+.hero-brand-text{display:flex;flex-direction:column;line-height:1.05;letter-spacing:.04em}
+.hero-brand-text small{font-size:clamp(12px,1.2vw,17px);color:#8fd3ff;font-weight:400}
+.hero-brand-text strong{font-size:clamp(14px,1.5vw,21px);font-weight:800}
+.hero-brand-text strong span{font-size:.78em;font-weight:600}
+.hero-layered-title{margin:0 0 clamp(18px,2.4vw,28px);color:#fff;line-height:1;letter-spacing:-.02em}
+.hero-title-main{display:block;font-size:clamp(2.5rem,5vw,4.6rem);font-weight:800;white-space:nowrap}
+.hero-title-sub{display:block;font-size:clamp(2.1rem,4.6vw,4.2rem);font-weight:300}
+.hero-layered .hero-title-sub em{font-family:"Caveat Brush",cursive!important;font-style:normal;font-weight:400;color:#d8ff4b;font-size:1.35em;position:relative;display:inline-block;margin-left:.08em}
+.hero-title-sub em::after{content:"";position:absolute;left:-2%;right:-4%;bottom:-.04em;height:.09em;background:#d8ff4b;border-radius:40px;transform:rotate(-2deg)}
+.hero-layered-lead{font-size:clamp(1rem,1.35vw,1.3rem);line-height:1.55;color:#e8eeff;max-width:500px;margin:0 0 clamp(24px,3vw,36px)}
+.hero-layered-lead strong{color:#fff;font-weight:700}
+.hero-layered-actions{display:flex;flex-wrap:wrap;gap:14px}
+.hero-layered-actions .btn{margin-top:0;gap:14px;font-size:clamp(14px,1.1vw,16px);padding:15px 26px}
+.hero-btn-primary{background:#d8ff4b;color:#10195b;border-color:#d8ff4b}
+.hero-btn-primary .hero-btn-icon{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#10195b;color:#fff;font-size:20px;line-height:1}
+.hero-btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.85)}
+.hero-layered-actions .btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.25)}
+
+/* Tablet y celular: la foto pasa a ser fondo completo y los textos van abajo */
+@media(max-width:850px){
+  .hero-layered{align-items:flex-end;min-height:max(540px,min(820px,calc(100svh - 112px)))}
+  .hero-layered .hero-bg{width:100%;inset:0}
+  .hero-layered .hero-bg-img{object-position:45% 20%}
+  .hero-layered::before{background:linear-gradient(180deg,rgba(10,21,83,.15) 0%,rgba(10,21,83,.35) 30%,rgba(10,21,83,.88) 58%,#0a1553 78%)}
+  .hero-layered-inner{padding:32px 20px 36px}
+  .hero-layered-copy{max-width:520px}
+  .hero-brand{flex-direction:row;gap:12px;text-align:left;margin-bottom:18px}
+  .hero-brand-emblem{width:64px;border-width:3px}
+}
+@media(max-width:480px){
+  .hero-layered-inner{padding:max(190px,48vw) 16px 28px}
+  .hero-title-main{font-size:clamp(2.2rem,11vw,2.9rem)}
+  .hero-title-sub{font-size:clamp(1.8rem,9vw,2.4rem)}
+  .hero-layered-actions{flex-direction:column}
+  .hero-layered-actions .btn{justify-content:center;width:100%}
+}
+@media(max-width:850px) and (orientation:landscape){
+  .hero-layered{min-height:520px}
+  .hero-layered .hero-bg{width:55%;inset:0 0 0 auto}
+  .hero-layered::before{background:linear-gradient(90deg,#0a1553 46%,rgba(10,21,83,.7) 56%,rgba(10,21,83,0) 80%)}
+  .hero-layered{align-items:center}
+}
+.hero-layered .hero-layered-title{overflow-wrap:normal}
