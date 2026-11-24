@@ -179,3 +179,10 @@ body{overflow-x:hidden}h1,h2,h3,h4,.gallery-tile-overlay strong,.brand-name stro
   .header .nav.open{display:flex}
   .header .nav a,.header .nav .navlink{padding:13px 9px;font-size:13px}
 }
+
+/* Banner de Nosotros: mismo diseño que Programas, con sus colores */
+.inner-hero-foto.ihf-nosotros{background:radial-gradient(60% 70% at 0% 0%,#002d74 0%,rgba(0,45,116,0) 70%),linear-gradient(180deg,#011e5a 0%,#002a70 45%,#003f94 100%)!important}
+.ihf-nosotros .section-kicker{color:#27b0e6}
+.ihf-nosotros .ihf-photo img{object-position:45% 35%}
+.ihf-nosotros .ihf-back{background:rgba(1,30,90,.35)}
+@media(max-width:700px){.ihf-nosotros .ihf-photo img{object-position:55% 30%}}
