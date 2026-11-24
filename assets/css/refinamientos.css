@@ -169,3 +169,13 @@ body{overflow-x:hidden}h1,h2,h3,h4,.gallery-tile-overlay strong,.brand-name stro
 .form-trampa{position:absolute!important;left:-9999px;width:1px;height:1px;overflow:hidden}
 .contact-form .form-submit:disabled{opacity:.7;cursor:wait}
 .contact-form .form-message{min-height:1.4em;margin-top:12px;font-weight:600;color:#155080}
+
+/* Menú: con "Régimen Especial" ya no cabe en una línea entre 851 y 980px; usa el menú ☰ desde 980px */
+@media(min-width:851px) and (max-width:980px){
+  .header{position:relative}
+  .menu-toggle{display:block}
+  .header .nav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;box-shadow:0 20px 30px #0e4c7820;padding:20px;
+    flex-direction:column;align-items:stretch;gap:0;max-width:none;overflow:visible;flex-wrap:nowrap;z-index:50}
+  .header .nav.open{display:flex}
+  .header .nav a,.header .nav .navlink{padding:13px 9px;font-size:13px}
+}
