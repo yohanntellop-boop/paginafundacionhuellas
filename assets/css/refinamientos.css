@@ -186,3 +186,11 @@ body{overflow-x:hidden}h1,h2,h3,h4,.gallery-tile-overlay strong,.brand-name stro
 .ihf-nosotros .ihf-photo img{object-position:45% 35%}
 .ihf-nosotros .ihf-back{background:rgba(1,30,90,.35)}
 @media(max-width:700px){.ihf-nosotros .ihf-photo img{object-position:55% 30%}}
+
+/* Banner de Régimen Especial: mismo diseño que Programas y Nosotros, con sus colores */
+.inner-hero-foto.ihf-regimen{background:radial-gradient(60% 70% at 0% 0%,#00368d 0%,rgba(0,54,141,0) 70%),linear-gradient(180deg,#012166 0%,#00307f 45%,#004db0 100%)!important}
+.ihf-regimen .section-kicker{color:#25c8fa}
+.ihf-regimen h1{line-height:.98}
+.ihf-regimen .ihf-photo img{object-position:40% 30%}
+.ihf-regimen .ihf-back{background:rgba(1,33,102,.35)}
+@media(max-width:700px){.ihf-regimen .ihf-photo img{object-position:50% 25%}}
