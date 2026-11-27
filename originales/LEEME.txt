@@ -1,0 +1,17 @@
+Imágenes originales de diseño enviadas para el sitio (no se publican en el hosting).
+
+banners/
+  banner-principal-referencia.webp          Referencia del banner principal del inicio
+  banner-psicosocial-alta-resolucion.webp   Banner 2 del carrusel ("Juntos por una transformación psicosocial")
+  banner-psicosocial-baja-resolucion.png    Primera versión (baja resolución) del banner 2
+  banner-programas.webp                     Banner de la página Programas
+  banner-nosotros.webp                      Banner de la página Nosotros
+  banner-regimen-especial.webp              Banner de la página Régimen Especial
+  portada-video-historias-que-dejan-huella.webp  Portada del video de presentación
+
+elementos/
+  logo-horizontal-referencia.png            Logo horizontal del encabezado (referencia)
+  logo-banner.png                           Logo tal como aparece en el banner principal
+  botones-banner.png                        Botones "Conoce nuestra labor" y "Súmate al cambio"
+
+Las versiones que usa la página (recortadas y optimizadas) están en assets/img/.
